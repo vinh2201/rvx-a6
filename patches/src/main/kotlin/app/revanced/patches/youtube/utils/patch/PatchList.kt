@@ -89,6 +89,10 @@ internal enum class PatchList(
         "Disable layout updates",
         "Adds an option to disable layout updates by server."
     ),
+    LITHO_BUFFER_FIX(
+        "Litho buffer fix",
+        "Prevents a crash in 17.34.36 by avoiding buffer overflow when opening a video description containing links with thumbnails."
+    ),
     DISABLE_RESUMING_MINIPLAYER_ON_STARTUP(
         "Disable resuming Miniplayer on startup",
         "Adds an option to disable the Miniplayer 'Continue watching' from resuming on app startup."
