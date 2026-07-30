@@ -168,11 +168,11 @@ object YouTubeAppClient {
      * The device machine id for the Google Pixel 9 Pro Fold.
      * See [this GitLab](https://dumps.tadiphone.dev/dumps/google/barbet) for more information.
      */
-    private const val DEVICE_MODEL_ANDROID_CREATOR = "Pixel 10 Pro XL"
+    private const val DEVICE_MODEL_ANDROID_CREATOR = "Pixel 9 Pro Fold"
     private const val DEVICE_MAKE_ANDROID_CREATOR = "Google"
-    private const val OS_VERSION_ANDROID_CREATOR = "16"
-    private const val ANDROID_SDK_VERSION_ANDROID_CREATOR = "36"
-    private const val BUILD_ID_ANDROID_CREATOR = "BD3A.251005.003.W3"
+    private const val OS_VERSION_ANDROID_CREATOR = "15"
+    private const val ANDROID_SDK_VERSION_ANDROID_CREATOR = "35"
+    private const val BUILD_ID_ANDROID_CREATOR = "AP3A.241005.015.A2"
     private const val GMS_CORE_VERSION_CODE_ANDROID_CREATOR = "262833029"
 
     private val USER_AGENT_ANDROID_CREATOR = androidUserAgent(
