@@ -102,7 +102,7 @@ object YouTubeAppClient {
      * [the App Store page of the YouTube app](https://www.meta.com/en-us/experiences/2002317119880945/),
      * in the `Additional details` section.
      */
-    private const val CLIENT_VERSION_ANDROID_VR = "1.74.19"
+    private const val CLIENT_VERSION_ANDROID_VR = "1.61.48"
 
     /**
      * The device machine id for the Meta Quest 3, used to get opus codec with the Android VR client.
@@ -117,7 +117,7 @@ object YouTubeAppClient {
      * but for some reason the build.props for the `Quest 3` state that the SDK version is 32.
      */
     private const val ANDROID_SDK_VERSION_ANDROID_VR = "34"
-    private const val BUILD_ID_ANDROID_VR = "UP1A.231005.007.A1"
+    private const val BUILD_ID_ANDROID_VR = "SQ3A.220605.009.A1"
 
     private val USER_AGENT_ANDROID_VR = androidUserAgent(
         packageName = PACKAGE_NAME_ANDROID_VR,
@@ -162,7 +162,7 @@ object YouTubeAppClient {
      * Note: Audio track is not available
      */
     private const val PACKAGE_NAME_ANDROID_CREATOR = "com.google.android.apps.youtube.creator"
-    private const val CLIENT_VERSION_ANDROID_CREATOR = "25.10.100"
+    private const val CLIENT_VERSION_ANDROID_CREATOR = "26.10.000"
 
     /**
      * The device machine id for the Google Pixel 9 Pro Fold.
