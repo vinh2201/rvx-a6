@@ -5,6 +5,7 @@ import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.patch.bytecodePatch
 import app.revanced.patcher.patch.resourcePatch
 import app.revanced.patcher.util.smali.ExternalLabel
+import app.revanced.patches.youtube.general.toolbar.attributeResolverFingerprint
 import app.revanced.patches.youtube.utils.compatibility.Constants.COMPATIBLE_PACKAGE
 import app.revanced.patches.youtube.utils.patch.PatchList.ADD_MISSING_RESOURCES
 import app.revanced.patches.youtube.utils.settings.ResourceUtils.addPreference
@@ -23,6 +24,19 @@ private val addMissingResourcesBytecodePatch = bytecodePatch {
                 """
                 if-nez p1, :original
                 const p1, 0x7f080144 # @drawable/button_color_transparent_background
+                """,
+                ExternalLabel("original", getInstruction(0))
+            )
+        }
+
+        // Hook attribute resolver to fix a crash when a resource is not found in the toolbar
+        attributeResolverFingerprint.methodOrThrow().apply {
+            addInstructionsWithLabels(
+                0,
+                """
+                if-nez p1, :original
+                const/4 v0, 0x0
+                return-object v0
                 """,
                 ExternalLabel("original", getInstruction(0))
             )
